@@ -31,7 +31,7 @@ This Real Estate Landing Page is a sleek, modern, and responsive web application
 
 1. **Clone the Repository:**  
    ```bash
-   git clone https://github.com/YourUsername/real-estate.git
+   git clone https://github.com/nagender811/real-estate.git
    ```
 
 2. **Navigate to the Project Directory:**  
