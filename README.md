@@ -31,13 +31,12 @@ This Real Estate Landing Page is a sleek, modern, and responsive web application
 
 1. **Clone the Repository:**  
    ```bash
-   git clone https://github.com/YourUsername/real-estate-landing-page.git
+   git clone https://github.com/YourUsername/real-estate.git
    ```
 
 2. **Navigate to the Project Directory:**  
    ```bash
-   cd real-estate-landing-page
-   ```
+   cd real-estate
 
 3. **Install Dependencies:**  
    ```bash
@@ -46,11 +45,11 @@ This Real Estate Landing Page is a sleek, modern, and responsive web application
 
 4. **Start the Development Server:**  
    ```bash
-   npm start
+   npm run dev
    ```
 
 5. **Access the App:**  
-   Open a web browser and navigate to [http://localhost:3000](http://localhost:3000) to explore the app.
+   Open a web browser and navigate to [http://localhost:5173](http://localhost:5173) to explore the app.
 
 ---
 
