@@ -1,7 +1,33 @@
 import React from "react";
 import { motion } from "framer-motion";
+import { toast } from "react-toastify";
 
 function Contact() {
+  const [result, setResult] = React.useState("");
+
+  const onSubmit = async (event) => {
+    event.preventDefault();
+    setResult("Sending....");
+    const formData = new FormData(event.target);
+
+    formData.append("access_key", "a4a8edc1-bc03-4765-ab47-5889c48b7d2c");
+
+    const response = await fetch("https://api.web3forms.com/submit", {
+      method: "POST",
+      body: formData
+    });
+
+    const data = await response.json();
+
+    if (data.success) {
+      setResult("");
+      event.target.reset();
+      toast.success("Form Submitted Successfully");
+    } else {
+      console.log("Error", data);
+      toast.error(data.message)
+    }
+  };
   return (
     <motion.div
     initial={{opacity: 0, x:-200}}
@@ -21,7 +47,7 @@ function Contact() {
         Ready to Make a Move? Let's Build Your Future Together
       </p>
 
-      <form className="max-w-2xl mx-auto text-gray-600  pt-8">
+      <form onSubmit={onSubmit} className="max-w-2xl mx-auto text-gray-600  pt-8">
         <div className="flex flex-wrap">
           <div className="w-full md:w-1/2 text-left">
             Your Name
